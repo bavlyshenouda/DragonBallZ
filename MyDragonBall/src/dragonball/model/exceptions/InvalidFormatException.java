@@ -1,0 +1,35 @@
+package dragonball.model.exceptions;
+
+import java.io.IOException;
+
+public abstract class InvalidFormatException extends IOException {
+
+private static final long serialVersionUID = 1L;
+
+private String sourceFile;
+private int sourceLine;
+
+public InvalidFormatException(String sourceFile, int sourceLine) {
+		super();
+		this.sourceFile = sourceFile;
+		this.sourceLine = sourceLine;
+}
+	
+public InvalidFormatException(String message, String sourceFile, int sourceLine){
+	super(message);
+	this.sourceFile = sourceFile;
+	this.sourceLine = sourceLine;
+}
+
+public String getSourceFile() {
+	return sourceFile;
+}
+
+public int getSourceLine() {
+	return sourceLine;
+}
+
+
+
+
+}
